@@ -51,6 +51,7 @@ This version is completed with new docker. Soon updates for travis.
 - Travis : this is for travis updates
 
 ### Important Links
+- CLI : https://github.com/Nur1Labs/CryptonoteEvo-CLI
 - GUI : https://github.com/Nur1Labs/CryptonoteEvo-GUI
 - Easy Miner : https://github.com/Nur1Labs/CryptonoteEvo-EasyMiner
 - Pool : https://github.com/Nur1Labs/CryptonoteEvo-Pool
