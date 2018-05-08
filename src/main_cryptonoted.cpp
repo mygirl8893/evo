@@ -23,6 +23,7 @@ Options:
   --export-blocks=<directory>          Export blockchain into specified directory as blocks.bin and blockindexes.bin, then exit. This overwrites existing files.
   --allow-local-ip                     Allow local ip add to peer list, mostly in debug purposes.
   --testnet                            Configure for testnet.
+  --masternodes                        Configure for masternodes.
   --p2p-bind-address=<ip:port>         Interface and port for P2P network protocol [default: 0.0.0.0:8080].
   --p2p-external-port=<port>           External port for P2P network protocol, if port forwarding used with NAT [default: 8080].
   --cryptonoted-bind-address=<ip:port>   Interface and port for cryptonoted RPC [default: 0.0.0.0:8081].
