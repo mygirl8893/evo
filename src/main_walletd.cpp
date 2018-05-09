@@ -31,7 +31,7 @@ Options:
   --export-view-only=<file>            Export view-only version of wallet file with the same password, then exit.
   --export-keys                        Export wallet keys to stdout, then exit.
   --testnet                            Configure for testnet.
-  --walletd-bind-address=<ip:port>     Interface and port for walletd RPC [default: 127.0.0.1:8070].
+  --walletd-bind-address=<ip:port>     Interface and port for bytecoind RPC [default: 127.0.0.1:8081].
   --data-folder=<full-path>            Folder for wallet cache, blockchain, logs and peer DB [default: )" platform_DEFAULT_DATA_FOLDER_PATH_PREFIX
     R"(cryptonote].
   --cryptonoted-remote-address=<ip:port> Connect to remote cryptonoted and suppress running built-in cryptonoted.
