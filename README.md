@@ -48,7 +48,6 @@ This version is completed with new docker. Soon updates for travis.
 ### Development tree
 - Dev : this for who contribute the works. anyone can do
 - V1-Ruby : this for Old Ruby Version
-- Travis : this is for travis updates
 
 ### Important Links
 - CLI : https://github.com/Nur1Labs/CryptonoteEvo-CLI
