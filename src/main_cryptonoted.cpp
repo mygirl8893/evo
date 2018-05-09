@@ -18,6 +18,7 @@ Usage:
   cryptonoted [options]
   cryptonoted --help | -h
   cryptonoted --version | -v
+  cryptonoted --exchange | -e
 
 Options:
   --export-blocks=<directory>          Export blockchain into specified directory as blocks.bin and blockindexes.bin, then exit. This overwrites existing files.
