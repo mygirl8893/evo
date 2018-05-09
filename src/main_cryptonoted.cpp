@@ -27,7 +27,7 @@ Options:
   --masternodes                        Configure for masternodes.
   --p2p-bind-address=<ip:port>         Interface and port for P2P network protocol [default: 0.0.0.0:8080].
   --p2p-external-port=<port>           External port for P2P network protocol, if port forwarding used with NAT [default: 8080].
-  --cryptonoted-bind-address=<ip:port>   Interface and port for cryptonoted RPC [default: 0.0.0.0:8081].
+  --cryptonoted-bind-address=<ip:port> Interface and port for bytecoind RPC [default: 127.0.0.1:8081].
   --seed-node-address=<ip:port>        Specify list (one or more) of nodes to start connecting to.
   --priority-node-address=<ip:port>    Specify list (one or more) of nodes to connect to and attempt to keep the connection open.
   --exclusive-node-address=<ip:port>   Specify list (one or more) of nodes to connect to only. All other nodes including seed nodes will be ignored.
@@ -69,6 +69,7 @@ int main(int argc, const char *argv[]) try {
 
 	logging::LoggerManager logManager;
 	logManager.configure_default(config.get_data_folder("logs"), "cryptonoted-");
+	//block_chain.test_undo_everything();
 
 	BlockChainState block_chain(logManager, config, currency);
 
