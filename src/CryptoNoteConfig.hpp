@@ -47,7 +47,9 @@ const size_t DIFFICULTY_LAG = 15;  // !!!
 static_assert(
     2 * DIFFICULTY_CUT <= DIFFICULTY_WINDOW(DIFFICULTY_TARGET) - 2, "Bad DIFFICULTY_WINDOW or DIFFICULTY_CUT");
 
-const size_t MAX_BLOCK_SIZE_INITIAL                  = 20 * 1024;
+//Enable ASIC Resist Put 2Mb per block size. If disable back to 1Mb
+//Cuckoo implemented!
+const size_t MAX_BLOCK_SIZE_INITIAL                  = 25 * 1024;
 const uint64_t MAX_BLOCK_SIZE_GROWTH_SPEED_NUMERATOR = 100 * 1024;
 constexpr uint64_t MAX_BLOCK_SIZE_GROWTH_SPEED_DENOMINATOR(uint32_t difficulty_target) {
 	return 365 * 24 * 60 * 60 / difficulty_target;
