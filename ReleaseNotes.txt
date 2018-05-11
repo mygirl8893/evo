@@ -104,3 +104,8 @@ Release notes 2.1.2 -The Suniaster
 - Ico added and run
 - PoS installed
 - Premine Installed
+
+Release notes 2.1.3 -The Suniaster
+
+- ASIC レジストイネーブルディセーブル
+- マスターノード
