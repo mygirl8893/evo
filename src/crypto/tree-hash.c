@@ -9,7 +9,7 @@
 #endif
 
 #include "hash-ops.h"
-#include "crypto-cuckoo_load.h"
+//#include "crypto-cuckoo_load.h" example unused!
 
 void tree_hash(const unsigned char (*hashes)[HASH_SIZE], size_t count, unsigned char *root_hash) {
   assert(count > 0);
