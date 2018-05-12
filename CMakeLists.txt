@@ -57,6 +57,7 @@ file(GLOB SRC_CRYPTO
     src/crypto/*.cpp src/crypto/*.hpp src/crypto/*.h
     src/crypto/blake256.c
     src/crypto/chacha8.c
+    src/crypto/cuckoo.c
     src/crypto/crypto-ops-data.c
     src/crypto/crypto-ops.c
     src/crypto/crypto-util.c
