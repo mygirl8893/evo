@@ -87,8 +87,8 @@ file(GLOB SRC_LOGGING src/logging/*.cpp src/logging/*.hpp)
 file(GLOB SRC_P2P src/p2p/*.cpp src/p2p/*.hpp)
 file(GLOB SRC_CORE src/Core/*.cpp src/Core/*.hpp src/Core/*.h)
 file(GLOB SRC_HTTP src/http/*.cpp src/http/*.hpp)
-file(GLOB SRC_MN chain/http/*.cpp chain/http/*.hpp)
-file(GLOB SRC_RCT ringct/http/*.cpp ringct/http/*.hpp)
+file(GLOB SRC_MN src/chain/*.cpp chain/*.hpp)
+file(GLOB SRC_RCT src/ringct/*.cpp src/ringct/*.hpp)
 file(GLOB SRC_PLATFORM
     src/platform/ExclusiveLock.cpp src/platform/ExclusiveLock.hpp
     src/platform/Files.cpp src/platform/Files.hpp
@@ -126,6 +126,11 @@ set(SOURCE_FILES
     src/rpc_api.hpp
     src/version.hpp
 )
+set(SOURCE_MN
+    ${SOURCE_FILES}
+    ${SRC_MN}
+    ${SRC_RCT}
+)
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/bin")
 set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/libs")
 if(WIN32)
@@ -138,7 +143,7 @@ include_directories(SYSTEM ../boost)
 endif()
 add_library(evonote-crypto ${SRC_CRYPTO})
 add_library(evonote-core ${SOURCE_FILES})
-add_library(evonote-mn ${SRC_MN},${SRC_RCT})
+add_library(evonote-mn ${SOURCE_MN})
 target_link_libraries(evonote-core evonote-crypto evonote-mn)
 if(WIN32)
     add_executable(walletd src/main_walletd.cpp src/cryptonote.rc) # .rc works only if referenced directly in add_executable
