@@ -72,8 +72,13 @@ file(GLOB SRC_CRYPTO
     src/crypto/oaes_lib.c
     src/crypto/random.c
     src/crypto/skein.c
-    src/crypto/slow-hash_x86.c
+	# normal by remove # src and put heavy by # src
+    # src/crypto/slow-hash_x86.c
     src/crypto/tree-hash.c
+	# heavy
+	src/crypto/cn_slow_hash_hard_arm.cpp
+	src/crypto/cn_slow_hash_hard_intel.cpp
+	src/crypto/cn_slow_hash_soft.cpp
 )
 file(GLOB SRC_COMMON src/common/*.cpp src/common/*.hpp)
 file(GLOB SRC_SERIALIZATION src/Serialization/*.cpp src/Serialization/*.hpp)
