@@ -10,13 +10,13 @@
 #include <vector>
 #include <tuple>
 
-#include "crypto/generic-ops.h"
+#include "crypto/generic-ops.hpp"
 
 extern "C" {
 #include "crypto/random.h"
 #include "crypto/keccak.h"
 }
-#include "crypto/crypto.h"
+#include "crypto/crypto.hpp"
 
 
 #include "rctTypes.h"

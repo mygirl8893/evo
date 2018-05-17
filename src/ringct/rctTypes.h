@@ -14,7 +14,7 @@ extern "C" {
 #include "crypto/random.h"
 #include "crypto/keccak.h"
 }
-#include "crypto/generic-ops.h"
+#include "crypto/generic-ops.hpp"
 #include "crypto/crypto.h"
 
 //unfinished
