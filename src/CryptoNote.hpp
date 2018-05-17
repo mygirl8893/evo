@@ -31,6 +31,7 @@ typedef uint64_t Amount;
 typedef uint32_t Timestamp;
 typedef uint64_t UnlockMoment;
 typedef uint64_t ICO;
+typedef uint64_t PoS;
 typedef uint64_t MasterNodes;
 // Height or Timestamp, 32-bit is enough, but historically we already have several very large values in blockchain
 typedef int64_t SignedAmount;
