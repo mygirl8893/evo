@@ -114,3 +114,4 @@ Release notes 2.1.4 -The Suniaster
 
 - Heavy features
 - Ring Signature
+- PoS progress 5%
