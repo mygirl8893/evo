@@ -76,9 +76,9 @@ file(GLOB SRC_CRYPTO
     src/crypto/slow-hash_x86.c
     src/crypto/tree-hash.c
 	# heavy
-	# src/crypto/cn_slow_hash_hard_arm.cpp
-	# src/crypto/cn_slow_hash_hard_intel.cpp
-	# src/crypto/cn_slow_hash_soft.cpp
+	src/crypto/cn_slow_hash_hard_arm.cpp
+	src/crypto/cn_slow_hash_hard_intel.cpp
+	src/crypto/cn_slow_hash_soft.cpp
 )
 file(GLOB SRC_COMMON src/common/*.cpp src/common/*.hpp)
 file(GLOB SRC_SERIALIZATION src/Serialization/*.cpp src/Serialization/*.hpp)
@@ -87,6 +87,8 @@ file(GLOB SRC_LOGGING src/logging/*.cpp src/logging/*.hpp)
 file(GLOB SRC_P2P src/p2p/*.cpp src/p2p/*.hpp)
 file(GLOB SRC_CORE src/Core/*.cpp src/Core/*.hpp src/Core/*.h)
 file(GLOB SRC_HTTP src/http/*.cpp src/http/*.hpp)
+file(GLOB SRC_MN chain/http/*.cpp chain/http/*.hpp)
+file(GLOB SRC_RCT ringct/http/*.cpp ringct/http/*.hpp)
 file(GLOB SRC_PLATFORM
     src/platform/ExclusiveLock.cpp src/platform/ExclusiveLock.hpp
     src/platform/Files.cpp src/platform/Files.hpp
@@ -95,7 +97,6 @@ file(GLOB SRC_PLATFORM
     src/platform/PreventSleep.cpp src/platform/PreventSleep.hpp
     src/platform/Windows.hpp src/platform/DB.hpp
 )
-file(GLOB SRC_MN chain/http/*.cpp chain/http/*.hpp)
 if(WIN32)
     set_property(SOURCE ${SRC_CRYPTO} PROPERTY COMPILE_FLAGS -Ot)
     set_property(SOURCE ${SRC_DB} PROPERTY COMPILE_FLAGS "-Ot -w")
@@ -137,7 +138,7 @@ include_directories(SYSTEM ../boost)
 endif()
 add_library(evonote-crypto ${SRC_CRYPTO})
 add_library(evonote-core ${SOURCE_FILES})
-add_library(evonote-mn ${SRC_MN})
+add_library(evonote-mn ${SRC_MN},${SRC_RCT})
 target_link_libraries(evonote-core evonote-crypto evonote-mn)
 if(WIN32)
     add_executable(walletd src/main_walletd.cpp src/cryptonote.rc) # .rc works only if referenced directly in add_executable
