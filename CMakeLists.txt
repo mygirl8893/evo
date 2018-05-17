@@ -73,7 +73,7 @@ file(GLOB SRC_CRYPTO
     src/crypto/random.c
     src/crypto/skein.c
 	# normal by remove # src and put heavy by # src
-    # src/crypto/slow-hash_x86.c
+    src/crypto/slow-hash_x86.c
     src/crypto/tree-hash.c
 	# heavy
 	src/crypto/cn_slow_hash_hard_arm.cpp
