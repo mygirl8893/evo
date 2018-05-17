@@ -88,7 +88,7 @@ file(GLOB SRC_P2P src/p2p/*.cpp src/p2p/*.hpp)
 file(GLOB SRC_CORE src/Core/*.cpp src/Core/*.hpp src/Core/*.h)
 file(GLOB SRC_HTTP src/http/*.cpp src/http/*.hpp)
 file(GLOB SRC_MN src/chain/*.cpp chain/*.hpp)
-file(GLOB SRC_RCT src/ringct/*.cpp src/ringct/*.hpp)
+#file(GLOB SRC_RCT src/ringct/*.cpp src/ringct/*.hpp)
 file(GLOB SRC_PLATFORM
     src/platform/ExclusiveLock.cpp src/platform/ExclusiveLock.hpp
     src/platform/Files.cpp src/platform/Files.hpp
@@ -129,7 +129,7 @@ set(SOURCE_FILES
 set(SOURCE_MN
     ${SOURCE_FILES}
     ${SRC_MN}
-    ${SRC_RCT}
+    #${SRC_RCT}
 )
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/bin")
 set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/libs")
