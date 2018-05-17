@@ -66,6 +66,11 @@ public:
 	ICO cryptonote_ico_max;
 	ICO cryptonote_ico_interval;
 	//PoS
+	uint64_t m_depositMinAmount;
+    uint32_t m_depositMinTerm;
+    uint32_t m_depositMaxTerm;
+    uint64_t m_depositMinTotalRateFactor;
+    uint64_t m_depositMaxTotalRate;
 	uint64_t depositMinAmount() const { return m_depositMinAmount; }
     uint32_t depositMinTerm() const { return m_depositMinTerm; }
     uint32_t depositMaxTerm() const { return m_depositMaxTerm; }
