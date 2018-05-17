@@ -76,9 +76,9 @@ file(GLOB SRC_CRYPTO
     src/crypto/slow-hash_x86.c
     src/crypto/tree-hash.c
 	# heavy
-	# src/crypto/cn_slow_hash_hard_arm.cpp
-	# src/crypto/cn_slow_hash_hard_intel.cpp
-	# src/crypto/cn_slow_hash_soft.cpp
+	src/crypto/cn_slow_hash_hard_arm.cpp
+	src/crypto/cn_slow_hash_hard_intel.cpp
+	src/crypto/cn_slow_hash_soft.cpp
 )
 file(GLOB SRC_COMMON src/common/*.cpp src/common/*.hpp)
 file(GLOB SRC_SERIALIZATION src/Serialization/*.cpp src/Serialization/*.hpp)
@@ -171,8 +171,10 @@ else()
         set(CMAKE_OSX_DEPLOYMENT_TARGET "10.11")
         target_link_libraries(walletd "-framework Foundation" "-framework IOKit")
         target_link_libraries(cryptonoted "-framework Foundation" "-framework IOKit") # change this for made own coin
+		target_link_libraries(deluxe "-framework Foundation" "-framework IOKit") # change this for made own coin
     endif()
     target_link_libraries(walletd ${Boost_LIBRARIES} ${LINK_OPENSSL} dl pthread)
     target_link_libraries(cryptonoted ${Boost_LIBRARIES} ${LINK_OPENSSL} dl pthread) # change this for made own coin
+	target_link_libraries(deluxe ${Boost_LIBRARIES} ${LINK_OPENSSL} dl pthread) # change this for made own coin
     target_link_libraries(tests ${Boost_LIBRARIES} ${LINK_OPENSSL} dl pthread)
 endif()
