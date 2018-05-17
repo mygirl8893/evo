@@ -76,9 +76,9 @@ file(GLOB SRC_CRYPTO
     src/crypto/slow-hash_x86.c
     src/crypto/tree-hash.c
 	# heavy
-	src/crypto/cn_slow_hash_hard_arm.cpp
-	src/crypto/cn_slow_hash_hard_intel.cpp
-	src/crypto/cn_slow_hash_soft.cpp
+	# src/crypto/cn_slow_hash_hard_arm.cpp
+	# src/crypto/cn_slow_hash_hard_intel.cpp
+	# src/crypto/cn_slow_hash_soft.cpp
 )
 file(GLOB SRC_COMMON src/common/*.cpp src/common/*.hpp)
 file(GLOB SRC_SERIALIZATION src/Serialization/*.cpp src/Serialization/*.hpp)
@@ -87,7 +87,7 @@ file(GLOB SRC_LOGGING src/logging/*.cpp src/logging/*.hpp)
 file(GLOB SRC_P2P src/p2p/*.cpp src/p2p/*.hpp)
 file(GLOB SRC_CORE src/Core/*.cpp src/Core/*.hpp src/Core/*.h)
 file(GLOB SRC_HTTP src/http/*.cpp src/http/*.hpp)
-file(GLOB SRC_MN src/chain/*.cpp chain/*.hpp)
+file(GLOB SRC_MN src/chain/*.cpp src/chain/*.hpp)
 #file(GLOB SRC_RCT src/ringct/*.cpp src/ringct/*.hpp)
 file(GLOB SRC_PLATFORM
     src/platform/ExclusiveLock.cpp src/platform/ExclusiveLock.hpp
