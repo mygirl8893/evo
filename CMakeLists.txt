@@ -76,9 +76,9 @@ file(GLOB SRC_CRYPTO
     src/crypto/slow-hash_x86.c
     src/crypto/tree-hash.c
 	# heavy
-	src/crypto/cn_slow_hash_hard_arm.cpp
-	src/crypto/cn_slow_hash_hard_intel.cpp
-	src/crypto/cn_slow_hash_soft.cpp
+	# src/crypto/cn_slow_hash_hard_arm.cpp
+	# src/crypto/cn_slow_hash_hard_intel.cpp
+	# src/crypto/cn_slow_hash_soft.cpp
 )
 file(GLOB SRC_COMMON src/common/*.cpp src/common/*.hpp)
 file(GLOB SRC_SERIALIZATION src/Serialization/*.cpp src/Serialization/*.hpp)
@@ -125,22 +125,6 @@ set(SOURCE_FILES
     src/rpc_api.hpp
     src/version.hpp
 )
-set(SOURCE_MN
-    ${SRC_DB}
-    ${SRC_COMMON}
-    ${SRC_HTTP}
-    ${SRC_CORE}
-    ${SRC_SERIALIZATION}
-    ${SRC_SERIA}
-    ${SRC_LOGGING}
-    ${SRC_PLATFORM}
-    ${SRC_P2P}
-	${SRC_MN}
-    src/CryptoNote.hpp
-    src/CryptoNoteConfig.hpp
-    src/rpc_api.hpp
-    src/version.hpp
-)
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/bin")
 set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/libs")
 if(WIN32)
@@ -153,7 +137,7 @@ include_directories(SYSTEM ../boost)
 endif()
 add_library(evonote-crypto ${SRC_CRYPTO})
 add_library(evonote-core ${SOURCE_FILES})
-add_library(evonote-mn ${SOURCE_MN})
+add_library(evonote-mn ${SRC_MN})
 target_link_libraries(evonote-core evonote-crypto evonote-mn)
 if(WIN32)
     add_executable(walletd src/main_walletd.cpp src/cryptonote.rc) # .rc works only if referenced directly in add_executable
