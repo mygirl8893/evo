@@ -154,7 +154,7 @@ endif()
 add_library(evonote-crypto ${SRC_CRYPTO})
 add_library(evonote-core ${SOURCE_FILES})
 add_library(evonote-mn ${SOURCE_MN})
-target_link_libraries(evonote-core evonote-crypto)
+target_link_libraries(evonote-core evonote-crypto evonote-mn)
 if(WIN32)
     add_executable(walletd src/main_walletd.cpp src/cryptonote.rc) # .rc works only if referenced directly in add_executable
     add_executable(cryptonoted src/main_cryptonoted.cpp src/cryptonote.rc) # .rc works only if referenced directly in add_executable + change this for made own coin
@@ -173,7 +173,7 @@ set(Boost_USE_STATIC_LIBS ON)
 add_definitions(-DBOOST_BIND_NO_PLACEHOLDERS=1 -DBOOST_CONFIG_SUPPRESS_OUTDATED_MESSAGE=1) # boost::_1 conflicts with std::_1
 target_link_libraries(walletd evonote-crypto evonote-core)
 target_link_libraries(cryptonoted evonote-crypto evonote-core) # change this for made own coin
-target_link_libraries(deluxe evonote-crypto evonote-core evonote-mn) # masternodes
+target_link_libraries(deluxe evonote-mn) # masternodes
 target_link_libraries(tests evonote-crypto evonote-core )
 if(WIN32)
 else()
