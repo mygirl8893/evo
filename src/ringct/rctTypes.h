@@ -15,7 +15,7 @@ extern "C" {
 #include "crypto/keccak.h"
 }
 #include "crypto/generic-ops.hpp"
-#include "crypto/crypto.h"
+#include "crypto/crypto.hpp"
 
 //unfinished
 /*#include "serialization/serialization.h"
