@@ -598,9 +598,3 @@ uint64_t Currency::baseRewardFunction(uint64_t alreadyGeneratedCoins, uint32_t h
 
   return base_reward;
 }
-//PoS
-depositMinAmount(parameters::DEPOSIT_MIN_AMOUNT);
-depositMinTerm(parameters::DEPOSIT_MIN_TERM);
-depositMaxTerm(parameters::DEPOSIT_MAX_TERM);
-depositMinTotalRateFactor(parameters::DEPOSIT_MIN_TOTAL_RATE_FACTOR);
-depositMaxTotalRate(parameters::DEPOSIT_MAX_TOTAL_RATE);
