@@ -109,3 +109,9 @@ Release notes 2.1.3 -The Suniaster
 
 - ASIC レジストイネーブルディセーブル
 - マスターノード
+
+Release notes 2.1.4 -The Suniaster
+
+- Heavy features
+- Ring Signature
+- PoS progress 65%
