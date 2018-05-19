@@ -1,0 +1,2 @@
+/usr/bin/ar qc ../libs/libevonote-mn.a  CMakeFiles/evonote-mn.dir/src/chain/MasterNodes.cpp.o
+/usr/bin/ranlib ../libs/libevonote-mn.a

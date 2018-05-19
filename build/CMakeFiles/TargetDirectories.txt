@@ -1,0 +1,9 @@
+/root/coins/CryptonoteEvo-CLI/build/CMakeFiles/rebuild_cache.dir
+/root/coins/CryptonoteEvo-CLI/build/CMakeFiles/tests.dir
+/root/coins/CryptonoteEvo-CLI/build/CMakeFiles/evonote-core.dir
+/root/coins/CryptonoteEvo-CLI/build/CMakeFiles/evonote-crypto.dir
+/root/coins/CryptonoteEvo-CLI/build/CMakeFiles/deluxe.dir
+/root/coins/CryptonoteEvo-CLI/build/CMakeFiles/evonote-mn.dir
+/root/coins/CryptonoteEvo-CLI/build/CMakeFiles/edit_cache.dir
+/root/coins/CryptonoteEvo-CLI/build/CMakeFiles/walletd.dir
+/root/coins/CryptonoteEvo-CLI/build/CMakeFiles/cryptonoted.dir
