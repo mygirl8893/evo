@@ -79,7 +79,7 @@ const char CRYPTONOTE_BLOCKINDEXES_FILENAME[] = "blockindexes.bin";
 
 const char CRYPTONOTE_NAME[] = "cryptonote"; //this for name your coin
 
-const uint8_t CURRENT_TRANSACTION_VERSION = 1;
+const uint8_t CURRENT_TRANSACTION_VERSION = 2;
 
 const size_t BLOCKS_IDS_SYNCHRONIZING_DEFAULT_COUNT = 10000;  // by default, blocks ids count in synchronizing
 const size_t BLOCKS_SYNCHRONIZING_DEFAULT_COUNT     = 100;    // by default, blocks count in blocks downloading
