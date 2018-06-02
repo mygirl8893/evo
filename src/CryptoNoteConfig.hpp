@@ -13,7 +13,7 @@ namespace parameters {
 const uint32_t CRYPTONOTE_MAX_BLOCK_NUMBER             = 500000000;
 const uint32_t CRYPTONOTE_MAX_BLOCK_BLOB_SIZE          = 500000000;
 const uint32_t CRYPTONOTE_MAX_TX_SIZE                  = 1000000000;
-const uint64_t CRYPTONOTE_PUBLIC_ADDRESS_BASE58_PREFIX = 6;  // addresses start with "2"
+const uint64_t CRYPTONOTE_PUBLIC_ADDRESS_BASE58_PREFIX = 0xdd;  // addresses start with "2"
 const uint32_t CRYPTONOTE_MINED_MONEY_UNLOCK_WINDOW    = 10;
 const uint32_t CRYPTONOTE_BLOCK_FUTURE_TIME_LIMIT      = 60 * 60 * 2;
 
@@ -35,7 +35,7 @@ const size_t CRYPTONOTE_DISPLAY_DECIMAL_POINT       = 8;
 const uint64_t MINIMUM_FEE                          = 1000000;  // pow(10, 6)
 const uint64_t DEFAULT_DUST_THRESHOLD               = 1000000;  // pow(10, 6)
 
-const uint32_t DIFFICULTY_TARGET = 120;  // seconds
+const uint32_t DIFFICULTY_TARGET = 180;  // seconds
 constexpr uint32_t EXPECTED_NUMBER_OF_BLOCKS_PER_DAY(uint32_t difficulty_target) {
 	return 24 * 60 * 60 / difficulty_target;
 }
@@ -77,7 +77,7 @@ const char CRYPTONOTE_BLOCKS_FILENAME[]       = "blocks.bin";
 const char CRYPTONOTE_BLOCKINDEXES_FILENAME[] = "blockindexes.bin";
 }  // parameters
 
-const char CRYPTONOTE_NAME[] = "cryptonote"; //this for name your coin
+const char CRYPTONOTE_NAME[] = "dcoin"; //this for name your coin
 
 const uint8_t CURRENT_TRANSACTION_VERSION = 1;
 
@@ -124,7 +124,8 @@ static_assert(DEPOSIT_MIN_TERM <= DEPOSIT_MAX_TERM, "Bad DEPOSIT_MAX_TERM");
 static_assert(DEPOSIT_MIN_TERM * DEPOSIT_MAX_TOTAL_RATE > DEPOSIT_MIN_TOTAL_RATE_FACTOR, "Bad DEPOSIT_MIN_TOTAL_RATE_FACTOR or DEPOSIT_MAX_TOTAL_RATE");
 
 const char *const SEED_NODES[] = {
-    "10.0.2.15:8080"};
+    "10.0.2.15:8080",
+    "102.23.12.2:8080"};
 
 struct CheckpointData {
 	uint32_t index;
@@ -134,6 +135,6 @@ struct CheckpointData {
 constexpr const CheckpointData CHECKPOINTS[] = {
     /*{79000, "cae33204e624faeb64938d80073bb7bbacc27017dc63f36c5c0f313cad455a02"},
     {1479000, "16c9a464514685d325ac06b82e4476d0d5467c59b733f5fbd950e9931e58d18c"}*/};
-}  // CryptoNote
+}  // 
 
 //Checkpoint need config by {height, hash} try look block explorer or see our wiki for Hard Fork or Soft Fork
